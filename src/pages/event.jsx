@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Team (){
+function Event (){
 	return <h1>Title</h1>
 }
 
-export default Team;
+export default Event;
