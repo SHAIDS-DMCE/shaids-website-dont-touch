@@ -1,19 +1,22 @@
 import { useState } from 'react'
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import reactLogo from './assets/react.svg'
-import './App.css'
-import './animation.css'
-import './script.js'
+
+import {Home ,About , Team, Event} from './pages'; 
+import {Nav , Foo} from './layout'
+import './App.css' 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    
-    <div id="app">
-    <div id="hero">
-      <h1>NEON<br/>CURSOR</h1>
-      <a target="_blank" href="https://github.com/klevron/threejs-toys">github/threejs-toys</a>
-    </div>
-  </div>
+    <Router>
+    <Nav/>
+    <Routes>
+          <Route exact path='/' element={< Home />}></Route>
+          <Route exact path='/about' element={< About />}></Route> 
+   </Routes>
+  <Foo />
+</Router>
   
   )
 }
